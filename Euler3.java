@@ -10,7 +10,8 @@ public class Euler3 {
 	public Euler3(double N){
 		
 		double factors[] = new double[20]; //arbitrary number of factors, will need potential scaling method
-		System.out.println("Factor me:" + N);
+		//System.out.println("Factor me:" + N);
+		
 		int i; 	//current factor to be checked
 		int j = 0; //indexing for factors
 		
@@ -26,7 +27,7 @@ public class Euler3 {
 		}
 		
 		max = Math.ceil(max); //round up to the next value, this will be the upper most bound to check
-		System.out.println("max test value: " + max);
+		//System.out.println("max test value: " + max);
 		
 		double c = N;	//copy of initial value 
 		for(i=2; i < max; i++) //brute force only needs to go up to square root of N
@@ -35,7 +36,7 @@ public class Euler3 {
 			//System.out.println("result: " + r);
 			
 			if(r % 1.0 == 0){	//if a clean division occurs
-				System.out.println("added " + i);
+				//System.out.println("added " + i);
 				factors[j] = i; //save the factor
 				j++;			//increment
 				c = r;		//continue division from this new result
